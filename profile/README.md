@@ -190,42 +190,7 @@ AI 코치 아바타와 함께 멀티턴 면접·발표 연습을 진행하는 �
 ---
 
 ## 🏗 시스템 아키텍처
-
-```
-┌─────────────────────────────────────────────────┐
-│  Frontend (Next.js / Vercel)                    │
-│  /  /live  /feedback  /report  /login           │
-└─────────────────┬───────────────────────────────┘
-                  │ HTTPS (REST / multipart)
-                  ▼
-┌─────────────────────────────────────────────────┐
-│  Backend (Spring Boot / Google Cloud Run)       │
-│  - Google OAuth2 인증                            │
-│  - 세션·답변·피드백·리포트 CRUD                       │
-│  - GCS Signed URL 기반 문서 업로드 연동              │
-│  - Supabase PostgreSQL 연동 및 JPA 스키마 검증      │
-│  - AI Gateway 호출 (Internal API Key)            │
-│  - GCS Bucket/CORS/IAM 기반 문서 저장소 구성         │
-│  - Cloud Run 환경변수/서비스 계정 기반 배포 설정.       │
-│  - Github Actions CI/CD 구축                     │
-└─────────────────┬───────────────────────────────┘
-                  │ Internal HTTP
-                  ▼
-┌─────────────────────────────────────────────────┐
-│  AI Gateway (FastAPI / Google Cloud Run)        │
-│  - 요청 검증 후 Worker로 프록시                      │
-└─────────────────┬───────────────────────────────┘
-                  │ Internal HTTP
-                  ▼
-┌─────────────────────────────────────────────────┐
-│  AI Worker (FastAPI / Cloudflare Tunnel)        │
-│  - STT (Whisper)                                │
-│  - 질문 생성 (LLM + RAG)                          │
-│  - 턴별 피드백 (LLM + RAG + 멀티턴 컨텍스트)           │
-│  - 리포트 생성 (LLM + RAG)                         │
-│  - Embedding (BGE-M3 + pgvector)                │
-└─────────────────────────────────────────────────┘
-```
+<img width="2870" height="940" alt="image" src="https://github.com/user-attachments/assets/1d0db239-63c0-4373-a7b2-9d18dd4992f6" />
 
 > **규칙**: 프론트엔드는 AI 서버를 직접 호출하지 않습니다. 모든 AI 관련 요청은 Spring Boot 백엔드를 통해서만 전달됩니다.
 > 
