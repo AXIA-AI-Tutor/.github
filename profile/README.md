@@ -487,7 +487,7 @@ KAN-231 feat(rag): 꼬리질문 편향 및 점수 기준 보정
 | --- | --- | --- |
 | Frontend / PM | 최재명 | Next.js 화면 구현, AI 아바타 구현, Frontend Vercel 배포, Web Speech API TTS 성능 개선 및 한국어 보이스 최적화, 한국어 음절 분석 기반 Mouth Cue 애니메이션 구현, LLM 출력 피드백 텍스트 파싱 및 정규화, E2E 테스트 주도 및 5차 반복 개선 사이클 운영 / 일정 관리, 요구사항 정리, Jira 등 협업 툴 운영 |
 | Backend / Frontend | 김동규 | GCP Cloud Run 배포, GCS Signed URL 문서 문서 업로드 API, Supabase PostgreSQL 연동, Document/Answer/Feedback 저장·조회 API, GCS Bucket·CORS·IAM 설정, 운영 환경변수 및 CI/CD 구성 / TTS 구현 |
-| Backend / AI | 신은찬 | Google OAuth2 인증, User/Session/Report API, FastAPI AI Gateway, 멀티턴 꼬리질문, pgvector RAG context, corpus ingest/embedding 검증 |
+| Backend / AI | 신은찬 | Spring-FastAPI AI Gateway, 멀티턴 꼬리질문, pgvector RAG context, corpus ingest/embedding, User/Session/Report/SessionEvent/GlobalCorpus, API, Google OAuth2 인증, Spring 세팅, ERD |
 | AI / worker | 김슬기 | Mediapipe Vision metric 평가, FastAPI, STT/LLM/RAG, 코퍼스 파이프라인, LangGraph 멀티턴 질문 구현, CloudFlare 로컬 llm 연동 |
 
 ---
