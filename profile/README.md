@@ -142,7 +142,9 @@ AI 코치 아바타와 함께 멀티턴 면접·발표 연습을 진행하는 �
 | Styling | Tailwind CSS 4 |
 | State | Zustand 5 |
 | HTTP | Axios |
-| Vision | @mediapipe/tasks-vision (mouth cue) |
+| Vision | @mediapipe/tasks-vision (시선·자세 지표) |
+| Audio | MediaRecorder (답변 녹음) · Web Audio API (실시간 파형 시각화) |
+| TTS | Web Speech API (한국어 보이스 선택 · 음절 기반 mouth cue) |
 | Icons | lucide-react |
 | Test | Vitest + Testing Library |
 | Lint/Format | ESLint + Prettier |
